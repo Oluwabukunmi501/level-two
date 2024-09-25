@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Favor Calculator</h1>
+    <input type="number" placeholder="First Number" required autofocus id="firstNumber">
+    <input type="number" placeholder="Second Number" required id="secondNumber">
+    <button onclick="calculateSum()">+</button>
+    <button onclick="calculateDifference()">-</button>
+    <button onclick="calculateQuotient()">/</button>
+    <button onclick="calculateProduct()">*</button>
+
+    <!-- <input type="text" placeholder="First Number" required autofocus id="firstNumber">
+    <input type="text" placeholder="Second Number" required id="SecondNumber">
+    <<button onclick="CalculateValues()"></button>ó -->
+    <!-- <button onclick="calculateSum()">+</button>
+    <button onclick="calculateDivision()">/</button>
+    <button onclick="calculateProduct()">*</button>
+    <button onclick="calculateDifference()">-</button> --> 
+<br>
+<br>
+    <div id="displayResults"> Results will be out here </div>
+
+    <script>
+    console.log(displayResults.innerText)
+    function calculateProduct() {
+        var answer = firstNumber.value * secondNumber.value
+        console.log(answer);
+        displayResults.innerText = answer
+    }
+
+    function calculateDifference() {
+        var answer = firstNumber.value - secondNumber.value
+        console.log(answer);
+        displayResults.innerText = answer
+        console.log(displayResults.innerText)
+    }
+    
+    function calculateQuotient() {
+        var answer = firstNumber.value / secondNumber.value
+        console.log(answer);
+        displayResults.innerText = answer
+        console.log(displayResults.innerText)
+    }
+
+    function calculateSum() {
+        var answer = parseFloat(firstNumber.value) + parseFloat(secondNumber.value)
+        console.log(answer);
+        displayResults.innerText = answer
+        console.log(displayResults.innerText)
+    }
+    </script>
+      <!-- //parseFloat
+      //parseInt
+      //Number -->
+</body>
+</html>

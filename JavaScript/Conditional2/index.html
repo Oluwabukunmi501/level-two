@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="Grade">
+        <h1 class="emmy">Grading System</h1>
+        <br>
+        <p style="color:red; display: none; " id="errorMsg">open eyes bobo na score you suppose input fine child </p>
+        <BR></BR>
+        <input type="number" placeholder="Score" id="Score" style="border-radius: 40px; padding: 10px;box-shadow: 2px;">
+        <button onclick="checkGrade()" style="border-radius: 30px; padding: 5px;">Check</button>
+        <div id="display" style="color: white; align-items: center; margin-top: 70px; background-color:black; padding: 10px; border-radius: 30px; "></div>
+    </div>
+
+    <style>
+        .emmy{
+            margin-top: 100px;
+        }
+        .Grade{
+            /* margin-top: 50px; */
+            height: 98vh;
+            background-image: url(Why\ Everything\ You\ Know\ About\ Marketing\ Is\ Obsolete.jpeg);
+            width: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            /* display: flex; */
+            align-items: center;
+            justify-content: center;
+            display: grid;
+        }
+
+    </style>
+
+
+
+    <script>
+        var songF = new Audio('audio/videoplayback (1).weba');
+        var songE = new Audio('audio/videoplayback (4).weba');
+        var songD = new Audio('audio/videoplayback (5).weba');
+        var songC = new Audio('audio/videoplayback (2).weba');
+        var songB = new Audio('audio/videoplayback.weba');
+        var songA = new Audio('audio/videoplayback (3).weba');
+
+        function checkGrade() {
+            var userScore = document.getElementById('Score').value
+            var newScore = Number(userScore)
+            if (userScore === '') {
+                // alert('open eyes bobo')
+                errorMsg.style.display = 'block'
+                
+            } else{
+                errorMsg.style.display = 'none'
+                // console.log(userScore , newScore);
+                if(newScore >= 0 && newScore <= 39){
+                    console.log('F - You Failed better give up');
+                    document.getElementById("display").innerText = "F-You failed better Give up 🤣"
+                    songF.play();
+                }
+                if (newScore >= 40 && newScore <= 44) {
+                    console.log('E - Village People excellence');
+                    document.getElementById("display").innerText = "E-Village people Excellence😪😹"
+                    songE.play();
+                }
+                if (newScore >= 45 && newScore <= 49) {
+                    console.log('D - Average you sef try')
+                        document.getElementById("display").innerText = "D-Average you sef try 😐"
+                        songD.play()
+                }
+                if (newScore >= 50 && newScore <= 59) {
+                    console.log('C - You have escape clap hand for Jesus')
+                        document.getElementById("display").innerText = "C-You have escape clap hand for Jesus 😂👏"
+                        songC.play();
+                }
+                if (newScore >= 60 && newScore <= 74) {
+                    console.log('B - Scholard!!!!!!!! God abeg!')
+                        document.getElementById("display").innerText = "B - Scholard!!!!!!!! God abeg! 🤲🤗"
+                        songB.play();
+                }
+                if (newScore >= 75 && newScore <= 100) {
+                    console.log('A - Ahah! Brainy!!!!!! oshey!!!!! gege omo you too sabi!')
+                        document.getElementById("display").innerText = "A - Ahah! Brainy!!!!!! oshey!!!!! gege omo you too sabi! ✨👀🙌"
+                        songA.play()
+                }
+            }
+        }
+    </script>
+</body>
+</html>

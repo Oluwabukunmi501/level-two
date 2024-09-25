@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+</head>
+<body>
+    <input type="text" placeholder="Course Code" id="codeCourse">
+    <input type="text" placeholder="Course Title" id="Title">
+    <button onclick="addItems()">Add</button>
+
+
+
+
+    <script>
+    var allItems = []
+    function addItems() {
+        if (codeCourse.value === '' || title.value === '') {
+            alert('Are you blind ?!!!!')
+        } else {
+            console.log(codeCourse.value, title.value);
+            var courseObj = {
+                code: codeCourse.value,
+                titles: title.value
+            }
+            console.log(courseObj);
+            allItems.push(courseObj)|1X
+            console.log(courseObj);
+        }
+        
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+        var joyObj = {
+            height: "1.5m",
+            weight: "50kg",
+            complexion: "Custard bucket",
+            isBrilliant: true,
+            studentID:231050,
+            favoriteFoods: ['amala','rice','tea', 'oat'],
+            
+            walk(){
+            console.log('I will walk, I will walk I will walk till i reach my promised land');
+            }
+        }
+        joyObj.walk()
+
+        console.log(joyObj);
+        //dot notation
+        console.log(joyObj.height);
+        //bracket notation
+        console.log(joyObj['weight']);
+
+
+    </script>
+</body>
+</html>

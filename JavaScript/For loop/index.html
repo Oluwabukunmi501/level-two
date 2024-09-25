@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOOP</title>
+</head>
+<body>
+    <div id="Show" style="display: grid; grid-template-columns: 1fr, 1fr, 1fr, 1fr;"></div>
+    <script>
+
+        // for(var i = 1; i <= 11; i++){
+            //     console.log('I want big bags of money' + i);
+            //     Show.innerHTML += 'I want big bags of money. <br>' + i; 
+            // }
+            
+            
+            // for (let i = 0; i < myArrray.length; i++) {
+            //     console.log(myArrray[i][0]);
+            //     console.log(myArrray[i][1]);
+            //     console.log(myArrray[i][2]);
+                
+            // }
+
+        // Nested loop
+       const students = ['Favour', 'Rola', 'Jola'];
+        
+        let myArray = [
+        [1,2,3],
+        [4,5,6],
+        [7,8,9],
+        ]
+        
+        for (let i = 0; i < students.length; i++) {
+            console.log(students[i]);
+        }
+            
+
+        for (let i = 0; i < myArray.length; i++) {
+
+            for (let j = 0; j < myArray[i].length; j++) {
+                console.log(myArray[i][j]);
+            }
+        }
+
+        let weaRs = [
+            ['Jeans','Joggers','Cargo pants'],
+            ['Crop tops','T-shirts','Mesh tops'],
+            ['Maxi-skirts','flee-skirts','Mini-skirts'],
+    ]
+
+        for (let h = 0; h < weaRs.length; h++) {
+            for (let f = 0; f < weaRs[h].length; f++) {
+                console.log(weaRs[h][f]);
+            }
+            
+        }
+
+            //multiplication table
+            for (let i = 1; i <= 3; i++) {
+                for (let j = 1; j <= 3; j++) {
+                    console.log(`${i} x ${j} = ${i*j}`);
+
+                    document.getElementById('Show').innerHTML += `${i} x ${j} = ${i * j}` + '<br>'
+                    
+                }
+                
+            }
+            
+            for (let i = 1; i <= 3; i++) {
+                for (let j = 1; j <= 3; j++) {
+                    console.log(`${i} + ${j} = ${i+j}`);
+
+                    document.getElementById('Show').innerHTML += `${i} + ${j} = ${i + j}` + '<br>'
+                    
+                }
+                
+            }
+            for (let i = 1; i <= 3; i++) {
+                for (let j = 1; j <= 3; j++) {
+                    console.log(`${i} / ${j} = ${i/j}`);
+
+                    document.getElementById('Show').innerHTML += `${i} / ${j} = ${i / j}` + '<br>'
+                    
+                }
+                
+            }
+            for (let i = 1; i <= 3; i++) {
+                for (let j = 1; j <= 3; j++) {
+                    console.log(`${i} - ${j} = ${i-j}`);
+
+                    document.getElementById('Show').innerHTML += `${i} - ${j} = ${i - j}` + '<br>'
+                    
+                }
+                
+            }
+         
+
+
+</script>
+</body>
+</html>
